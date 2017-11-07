@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: dev  #当前活动环境
+logging:
+  path: logs  #日志文件保存路径
+mybatis:
+  mapper-locations: mybatis/mapper/*-mapper.xml #映射文件扫描路径
+  type-aliases-package: com.andy.resourcesharingplatform.domain #别名扫描包
+  configuration:
+    map-underscore-to-camel-case: true  #驼峰命名自动解析

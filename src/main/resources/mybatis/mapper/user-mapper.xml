@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="IUserDao">
+    <select id="queryUser" resultType="User" parameterType="User">
+      SELECT * FROM user WHERE id=#{id}
+    </select>
+
+    <insert id="insertUser" parameterType="User" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO user (username, password, mail_address) VALUE (
+        #{username},#{password},#{mailAddress}
+        )
+    </insert>
+
+    <update id="updateUser" parameterType="User">
+      UPDATE user SET
+      username=#{username},password=#{password},mail_address=#{mailAddress}
+      WHERE id=#{id}
+    </update>
+
+</mapper>

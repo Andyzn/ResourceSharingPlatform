@@ -14,7 +14,7 @@ public class Resource {
     /**
      * 资源ID，UUID表示
      */
-    private String id = UUID.randomUUID().toString();
+    private int id;
     /**
      * 资源名称
      */
@@ -36,11 +36,11 @@ public class Resource {
      */
     private Uri uri;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
